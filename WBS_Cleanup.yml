@@ -1,6 +1,11 @@
 ---
-- name: WSBcleanup
-  hosts: all
-  tasks:
-    ansible.windows.win_shell: | 
-      Invoke-Command -ScriptBlock {wbadmin delete backup -keepVersions:30}
+#- name: WSBcleanup
+#  hosts: all
+#  tasks:
+#    - name: Run Command
+#    ansible.windows.win_shell: | 
+#      cmd: Invoke-Command -ScriptBlock {wbadmin delete backup -keepVersions:30}
+
+
+- name: Example from an Ansible Playbook
+  ansible.windows.win_ping:
