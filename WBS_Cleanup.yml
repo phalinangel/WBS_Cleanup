@@ -2,6 +2,5 @@
 - name: WSBcleanup
   hosts: all
   tasks:
-    ansible.windows.win_command:
-    # When using cmd, the arguments need to be quoted manually
-    cmd: 'wbadmin delete backup -keepVersions:30'
+    ansible.windows.win_shell: | 
+      Invoke-Command -ScriptBlock {wbadmin delete backup -keepVersions:30}
