@@ -4,5 +4,5 @@
   tasks:
     ansible.windows.win_powershell:
         script: |
-          Invoke-Command -ScriptBlock {wbadmin delete backup -keepVersions:30}
+          'Invoke-Command -ScriptBlock {wbadmin delete backup -keepVersions:30}'
 
