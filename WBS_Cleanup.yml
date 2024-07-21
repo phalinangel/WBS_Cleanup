@@ -2,7 +2,7 @@
 - name: WSBcleanup
   hosts: cerberus.CERBERUSNET.NET
   tasks:
-    - name: Run Command
+    - name: Cleaning up baremetal backups
       ansible.windows.win_shell:
       cmd: Invoke-Command -ScriptBlock {wbadmin delete backup -keepVersions:30}
 
