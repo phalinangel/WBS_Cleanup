@@ -1,11 +1,8 @@
 ---
-#- name: WSBcleanup
-#  hosts: all
-#  tasks:
-#    - name: Run Command
-#    ansible.windows.win_shell: | 
-#      cmd: Invoke-Command -ScriptBlock {wbadmin delete backup -keepVersions:30}
+- name: WSBcleanup
+  hosts: cerberus.CERBERUSNET.NET
+  tasks:
+    - name: Run Command
+      ansible.windows.win_shell: | 
+      cmd: Invoke-Command -ScriptBlock {wbadmin delete backup -keepVersions:30}
 
-- name: Save the result of 'whoami' in 'whoami_out'
-  ansible.windows.win_command: whoami
-  register: whoami_out
