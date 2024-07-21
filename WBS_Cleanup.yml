@@ -2,10 +2,10 @@
 - name: WSBcleanup
   hosts: cerberus.CERBERUSNET.NET
   tasks:
-     ansible.windows.win_powershell:
-         script: |
-          # Your PowerShell script content here
-          Write-Host "Hello from Ansible!"
+    ansible.windows.win_powershell:
+      script: |
+        # Your PowerShell script content here
+        Write-Host "Hello from Ansible!"
 
 
 #    ansible.windows.win_powershell:
