@@ -1,6 +1,6 @@
 ---
 - name: WSBcleanup
-  hosts: all
+  hosts: cerberus
   tasks:
     - name: cleanup backups and keeping last 30 backups
       ansible.windows.win_shell: |
