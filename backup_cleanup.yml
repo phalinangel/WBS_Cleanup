@@ -1,8 +1,7 @@
 ---
 - name: WSBcleanup
-  hosts: windows
+  hosts: '{{ target }}'
   tasks:
     - name: cleanup backups and keeping last 30 backups
-      hosts: cerberus
       ansible.windows.win_shell: |
         cmd: "wbadmin delete backup -keepVersions:30"
