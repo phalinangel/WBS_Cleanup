@@ -3,11 +3,11 @@
   hosts: cerberus.CERBERUSNET.NET
   tasks:
     ansible.windows.win_powershell:
-      script: |
-        # Your PowerShell script content here
-        Write-Host "Hello from Ansible!"
+        script: |
+          'Invoke-Command -ScriptBlock {wbadmin delete backup -keepVersions:30}'
 
 
 #    ansible.windows.win_powershell:
-#        script: |
-#          'Invoke-Command -ScriptBlock {wbadmin delete backup -keepVersions:30}'
+#      script: |
+#        # Your PowerShell script content here
+#        Write-Host "Hello from Ansible!"
