@@ -3,4 +3,4 @@
   hosts: '{{ target }}'
   tasks:
     - name: cleanup backups and keeping last 30 backups
-      ansible.windows.win_shell: wbadmin delete backup -keepVersions:30 -Confirm:$false
+      ansible.windows.win_shell: wbadmin delete backup -keepVersions:30 -quiet
