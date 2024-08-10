@@ -1,6 +1,7 @@
 ---
 - name: WSBcleanup
   hosts: '{{ target }}'
+  gather_facts: no
   tasks:
     - name: cleanup backups and keeping last 30 backups
       ansible.windows.win_shell: wbadmin delete backup -keepVersions:90 -quiet
